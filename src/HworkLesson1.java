@@ -41,11 +41,15 @@ public class HworkLesson1 {
 
 
         String l1t5 = "hkj?h1#238u?kasda##r12?#3.?@K2lj##jh323";
-
         l1t5 = l1t5.replace("?","HELLO");
         l1t5 = l1t5.replace("#","");
-
         System.out.println(l1t5);
+
+        double y;
+        int x = 5;
+        int t = 6;
+        int s = 7;
+        y = Math.pow((Math.sin(Math.pow(x,t))),2)/(Math.sqrt(1+Math.pow(x,s)));
 
 
     }
