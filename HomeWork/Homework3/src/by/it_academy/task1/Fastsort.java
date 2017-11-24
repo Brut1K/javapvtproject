@@ -1,6 +1,6 @@
 package by.it_academy.task1;
 import java.util.Random;
-public class asdas {
+public class Fastsort {
 
 
 

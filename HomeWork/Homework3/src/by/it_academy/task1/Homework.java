@@ -8,6 +8,10 @@ public class Homework {
         printArray(arr);
         bubble_sort(arr);
         printArray(arr);
+        int[] arr2 = createArray(10);
+        printArray(arr2);
+        selection_sort(arr2);
+        printArray(arr2);
     }
 
     // создает массив типа int, входной аргумент-длина массива
@@ -43,11 +47,8 @@ public class Homework {
 
     public static void selection_sort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
-
-            
             int min = arr[i];
             int min_i = i;
-
 
             for (int j = i+1; j < arr.length; j++) {
                 if (arr[j] < min) {
@@ -55,7 +56,6 @@ public class Homework {
                     min_i = j;
                 }
             }
-
 
             if (i != min_i) {
                 int tmp = arr[i];
