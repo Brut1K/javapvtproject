@@ -12,11 +12,11 @@ public class Manager {
         Scanner scanner = new Scanner(System.in);
         String datebd;
         Date date = null;
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
-   /*     System.out.println("Введите имя студента");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        System.out.println("Введите имя студента");
         student.setName(scanner.nextLine());
         System.out.println("Введите фамилию студента");
-        student.setSurname(scanner.nextLine()); */
+        student.setSurname(scanner.nextLine());
         do {
             System.out.println("Введите дату рождения студента" +
                     " в формате 31-10-2006");
@@ -29,7 +29,6 @@ public class Manager {
             student.setDate(date);
         } while(date==null);
         student.setDate(date);
-        date = null;
     }
 
     public void generateArray(Student[] arr){
@@ -40,28 +39,32 @@ public class Manager {
         }
     }
 
+    /**
+     * Вычисляет средний возраст всех студентов
+     * @param arr массив студентов
+     */
     public void averageAge(Student[] arr){
-        int year = 0;
-        int month = 0;
-        int day;
-        int hour;
-        int minutes;
         long age = 0L;
         long averageage;
         Date curDate= new Date();
         long curlong = curDate.getTime();
-
-
+        //считаем возраст всех студентов в милисекундах
         for (Student a:arr){
             age = age + curlong - a.getDate().getTime();
         }
-        averageage = age/arr.length;
-        Date avdate = new Date(averageage);
-        System.out.println(avdate.toString());
-        Date date2 = new Date();
-        date2.setTime(0L);
-        System.out.println(date2.toString());
-
+        averageage = age/arr.length;//находим средний возраст в милисекундах
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.setTimeInMillis(averageage);//подставляем средний возраст в милисекундах в календарь
+        int year = calendar.get(GregorianCalendar.YEAR) - 1970;
+        int month = calendar.get(GregorianCalendar.MONTH);
+        int day = calendar.get(GregorianCalendar.DAY_OF_MONTH);
+        int hour = calendar.get(GregorianCalendar.HOUR_OF_DAY);
+        int minutes = calendar.get(GregorianCalendar.MINUTE);
+        int second = calendar.get(GregorianCalendar.SECOND);
+        System.out.println("Средний возраст составляет " + year + " лет" +
+                " " + month + " месяцев " + day + " дней " + hour + " часов" +
+                " " + minutes + " минут " + second + " секунд.");
+        //по хорошему тут для каждого инта ещё написать код, чтобы писало в правильном падеже...
 
     }
 }
