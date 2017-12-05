@@ -15,7 +15,7 @@ public class Main {
         // SimpleDateFormat, оставит просто текст
         String pattern = "MMM d'" + getPosfix(day) + "' KK:mm a";
         SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.ENGLISH);
-        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8"));
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+3"));
         String datatext = sdf.format(date);
         System.out.println(datatext);
 
@@ -25,7 +25,7 @@ public class Main {
         int dayM = gregorianCalendar.get(GregorianCalendar.DAY_OF_MONTH);
         int month = gregorianCalendar.get(GregorianCalendar.MONTH);
         //добавляет 30 дней
-        gregorianCalendar.add(GregorianCalendar.DATE,30);
+        gregorianCalendar.add(GregorianCalendar.DATE,0);
         System.out.println(gregorianCalendar.getTime().toString());
 
 

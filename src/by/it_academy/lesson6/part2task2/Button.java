@@ -5,7 +5,7 @@ public class Button {
     private ButtonClick buttonClick;
     //записываем в баттон ссылку на мэйн,
     //чтобы баттон мог вызывать методы мэйн
-    public void setMain(ButtonClick ui) {
+    public void setUI(ButtonClick ui) {
         this.buttonClick = ui;
     }
     //симулирует нажатие на кнопку

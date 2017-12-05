@@ -5,7 +5,7 @@ public class Main {
        //создаем нужные элементы
         UI ui = new UI(); // в UI лежит логика работы с пользователем
         Button button = new Button();// создаем кнопку
-        button.setMain(ui); // скинули ссылку на UI в баттон
+        button.setUI(ui); // скинули ссылку на UI в баттон
         try{
             Thread.sleep(3000);
         } catch (InterruptedException e){}
@@ -15,7 +15,7 @@ public class Main {
 
         UI2 ui2 = new UI2();
         Button button2 = new Button();
-        button2.setMain(ui2);
+        button2.setUI(ui2);
 
         try{
             Thread.sleep(500);
