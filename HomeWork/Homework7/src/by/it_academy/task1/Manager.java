@@ -26,7 +26,6 @@ public class Manager {
             } catch (ParseException e) {
                 System.out.println("Вы ввели неверный формат");
             }
-            student.setDate(date);
         } while(date==null);
         student.setDate(date);
     }
