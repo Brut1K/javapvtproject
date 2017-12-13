@@ -6,11 +6,18 @@ import java.util.List;
 public class Room {
 
     private static final int maxPercent = 70;
-
+    private static final int maxLight = 4000;
+    private int numberWindows;
     private int lightness;
     private int lightnessCurrent;
     private double sqr;
     private double sqrCurrent;
+
+    public Room(double sqr, int numberWindows) {
+        this.sqr = sqr;
+        this.numberWindows = numberWindows;
+        this.lightnessCurrent = numberWindows*700;
+    }
 
     public int getLightnessCurrent() {
         return lightnessCurrent;
@@ -28,12 +35,16 @@ public class Room {
         this.sqrCurrent = sqrCurrent;
     }
 
-    private int numberWindows;
+
     private List<Lump> lumpList = new ArrayList();
     private List<Furniture> furnitureList = new ArrayList<>();
 
-    public void addLump(Lump lump){
-        lumpList.add(lump);
+    public void addLump(Lump lump) throws Exception{
+        if(lightnessCurrent+lump.getLigth()<=maxLight){
+            lumpList.add(lump);
+        } else {
+            throw new Exception();
+        }
     }
 
     public void addFurniture(Furniture furniture) throws Exception {

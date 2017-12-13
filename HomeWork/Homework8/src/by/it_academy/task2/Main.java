@@ -6,16 +6,19 @@ import java.util.Scanner;
 
 public class Main {
 
+    static int number = 0;
+    static boolean bool = true;
+    static String clear;
+    static Scanner scanner = new Scanner(System.in);
+    static int a;
+    static int b;
+
+
     public static void main(String[] args) {
 
         int command;
-        int a ;
-        int b ;
-        String clear;
-        Scanner scanner = new Scanner(System.in);
         do {
             command = 0;
-
             System.out.println("Введите 1, если хотите произвести сложение\n" +
                     "Введите 2, если хотите произвести вычетание\n" +
                     "Введите 3, если хотите произвести умножение\n" +
@@ -35,67 +38,15 @@ public class Main {
                     break;
                 }
                 case 2:{
-                    System.out.println("Введите уменьшаемое");
-                    try {
-                        a = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    System.out.println("Введите вычитаемое");
-                    try {
-                        b = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    System.out.println(a+"-"+b+"="+sub(a,b));
+                    Main.sub();
                     break;
                 }
                 case 3:{
-                    System.out.println("Введите первый множитель");
-                    try {
-                        a = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    System.out.println("Введите второй множитель");
-                    try {
-                        b = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    System.out.println(a+"*"+b+"="+multi(a,b));
+                    Main.multi();
                     break;
                 }
                 case 4:{
-                    System.out.println("Введите делимое");
-                    try {
-                        a = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    System.out.println("Введите делитель");
-                    try {
-                        b = scanner.nextInt();
-                    } catch(InputMismatchException e){
-                        System.out.println("Вы ввели некорректные данные");
-                        clear = scanner.next();
-                        break;
-                    }
-                    try{
-                        System.out.println(a+"/"+b+"="+div(a,b));
-                    } catch (ArithmeticException e){
-                        System.out.println("Делить на 0 нельзя");
-                    }
+                    Main.div();
                     break;
                 }
                 case 5:{
@@ -106,60 +57,69 @@ public class Main {
                     System.out.println("Вы ввели некорректное значение");
                 }
             }
-
         } while(command!=5);
-
     }
 
     public static void add(){
-        int a =0;
-        boolean a2 = true;
-        int b = 0;
-        boolean b2 = true;
-        String clear;
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое слагаемое");
-        do{
-            try {
-                a = scanner.nextInt();
-                a2 = false;
-            } catch(InputMismatchException e){
-                System.out.println("Вы ввели некорректные данные, повторите ввод");
-                clear = scanner.next();
-            }
-        } while (a2);
-
+        a = Main.enterNumber();
         System.out.println("Введите второе слагаемое");
-        do{
-            try {
-                b = scanner.nextInt();
-                b2 = false;
-            } catch(InputMismatchException e){
-                System.out.println("Вы ввели некорректные данные, повторите ввод");
-                clear = scanner.next();
+        b = Main.enterNumber();
+        System.out.println(a+" + "+b+" = "+(a+b));
+    }
+
+    public static void sub(){
+        System.out.println("Введите уменьшаемое");
+        a = Main.enterNumber();
+        System.out.println("Введите вычитаемое");
+        b = Main.enterNumber();
+        System.out.println(a+"-"+b+"="+(a-b));
+    }
+
+    public static void multi(){
+        System.out.println("Введите первый множитель");
+        a = Main.enterNumber();
+        System.out.println("Введите второй множитель");
+        b = Main.enterNumber();
+        try{
+            if(a!=5&&b!=5){
+                System.out.println(a+"*"+b+"="+(a*b));
+            } else {
+                throw new MultiplyByFive();
             }
-        } while (b2);
-             System.out.println(a+" + "+b+" = "+(a+b));
-
-    }
-
-
-
-    public static int sub(int a,int b){
-        return a-b;
-    }
-
-    public static int multi(int a, int b){
-        return a*b;
-    }
-    public static int div (int a, int b){
-        try {
-        return a/b;
-        } catch(ArithmeticException e){
-            System.out.println("Делить на 0 нельзя");
-            return 0;
+        } catch (MultiplyByFive e){
+            System.out.println(e.getRussianMessage());
         }
     }
 
+    public static void div (){
+        System.out.println("Введите делимое");
+        a = Main.enterNumber();
+        System.out.println("Введите делитель");
+        b = Main.enterNumber();
+        try{
+            System.out.println(a+"/"+b+"="+(a/b));
+        } catch (ArithmeticException e){
+            System.out.println("Делить на 0 нельзя");
+        }
+    }
+
+    public static int enterNumber(){
+        do{
+            try {
+                number = scanner.nextInt();
+                if (number==13)
+                    throw new Thirteen() ;
+                bool = false;
+            } catch(InputMismatchException e){
+                System.out.println("Вы ввели некорректные данные, повторите ввод");
+                clear = scanner.next();
+            } catch(Thirteen e){
+                System.out.println(e.getRussianMessage());
+            }
+        } while (bool);
+        bool = true;
+        return number;
+    }
 
 }
