@@ -53,7 +53,7 @@ public class Main {
                 File file = new File("ex2.html");
                 fileOutputStream = new FileOutputStream(file);
                 int byteRead = -1;
-                byte[] buffer = new byte[1000000];
+                byte[] buffer = new byte[4096];
                 while((byteRead = inputStream.read(buffer))!=-1){
                     fileOutputStream.write(buffer, 0,byteRead);
                 }
