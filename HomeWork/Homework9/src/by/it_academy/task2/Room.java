@@ -12,11 +12,22 @@ public class Room {
     private int lightnessCurrent;
     private double sqr;
     private double sqrCurrent;
+    private String name;
 
-    public Room(double sqr, int numberWindows) {
+    public Room(String name,double sqr, int numberWindows) {
         this.sqr = sqr;
         this.numberWindows = numberWindows;
         this.lightnessCurrent = numberWindows*700;
+        this.name = name;
+        this.sqrCurrent = 0.0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getLightnessCurrent() {
@@ -39,19 +50,22 @@ public class Room {
     private List<Lump> lumpList = new ArrayList();
     private List<Furniture> furnitureList = new ArrayList<>();
 
-    public void addLump(Lump lump) throws Exception{
+    public void addLump(Lump lump) throws IlluminanceTooMuchException{
         if(lightnessCurrent+lump.getLigth()<=maxLight){
             lumpList.add(lump);
+            lightnessCurrent+=lump.getLigth();
         } else {
-            throw new Exception();
+            System.out.println();
+            throw new IlluminanceTooMuchException();
         }
     }
 
-    public void addFurniture(Furniture furniture) throws Exception {
+    public void addFurniture(Furniture furniture) throws SpaceUsageTooMuchException {
         if (sqr*maxPercent/100<(sqrCurrent+furniture.getSqr())) {
-            throw new Exception();
+            throw new SpaceUsageTooMuchException();
         } else {
             furnitureList.add(furniture);
+            sqrCurrent+=furniture.getSqr();
         }
     }
 
@@ -77,5 +91,13 @@ public class Room {
 
     public void setNumberWindows(int numberWindows) {
         this.numberWindows = numberWindows;
+    }
+
+    public List<Lump> getLumpList() {
+        return lumpList;
+    }
+
+    public List<Furniture> getFurnitureList() {
+        return furnitureList;
     }
 }
