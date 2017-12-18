@@ -1,12 +1,18 @@
 package by.it_academy.lesson11.part1.Entity;
 
+import com.google.gson.annotations.SerializedName;
+
 public class People {
 
     private int id;
     private int age;
     private boolean isDegree;
-    private String name;
+    //аннотация для json. В firstName будет закидывать значения поля name
+    @SerializedName("name")
+    private String firstName;
     private String surname;
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -18,7 +24,7 @@ public class People {
         if (age != people.age) return false;
         if (id != people.id) return false;
         if (isDegree != people.isDegree) return false;
-        if (name != null ? !name.equals(people.name) : people.name != null) return false;
+        if (firstName != null ? !firstName.equals(people.firstName) : people.firstName != null) return false;
         return surname != null ? surname.equals(people.surname) : people.surname == null;
     }
 
@@ -27,7 +33,7 @@ public class People {
         int result = age;
         result = 31 * result + id;
         result = 31 * result + (isDegree ? 1 : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         return result;
     }
@@ -38,7 +44,7 @@ public class People {
                 "id=" + id +
                 ", age=" + age +
                 ", isDegree=" + isDegree +
-                ", name='" + name + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", surname='" + surname + '\'' +
                 '}'+'\n';
     }
@@ -68,12 +74,12 @@ public class People {
         isDegree = degree;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getSurname() {

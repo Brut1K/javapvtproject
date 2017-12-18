@@ -3,6 +3,12 @@ package by.it_academy.lesson11.part1;
 import by.it_academy.lesson11.part1.Entity.People;
 import by.it_academy.lesson11.part1.Entity.Root;
 
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -10,19 +16,17 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
 public class Main {
 
-    private static final String LINK = "http://kiparo.ru/t/test.xml";
+    private static final String LINK = "http://kiparo.ru/t/test.json";
 
     public static void main(String[] args) {
 
@@ -38,7 +42,7 @@ public class Main {
                 inputStream = httpURLConnection.getInputStream();
 
 
-                File file = new File("test.xml");
+                File file = new File("test.json");
                 fileOutputStream = new FileOutputStream(file);
                 int byteRead = -1;
                 byte[] buffer = new byte[4096];
@@ -46,7 +50,9 @@ public class Main {
                     fileOutputStream.write(buffer, 0,byteRead);
                 }
 
-                parseXML();
+        //        parseXML();
+         //       parseJson();
+                parseGson();
 
 
             } else {
@@ -140,7 +146,7 @@ public class Main {
             int age = Integer.parseInt(ageString);
 
             People people = new People();
-            people.setName(name);
+            people.setFirstName(name);
             people.setSurname(surName);
             people.setDegree(isDegree);
             people.setId(id);
@@ -154,6 +160,72 @@ public class Main {
     }
 
 
+    public static void parseJson(){
+        Root rootmodel = new Root();
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = null;
+        try{
+            fileReader = new FileReader("test.json");
+            JSONObject root = (JSONObject) parser.
+                    parse(fileReader);
+            String name = (String) root.get("name");
+            rootmodel.setName(name);
+            JSONArray peoples = (JSONArray) root.get("people");
+            List<People> peopleList = new ArrayList<>();
+            for(Object elements:peoples){
+                People peopleModel = new People();
+                JSONObject people = (JSONObject) elements;
+                long id = (Long) people.get("id");
+                String peoplename = (String) people.get("name");
+                String peoplesurname = (String)people.get("surname");
+                long age = (Long) people.get("age");
+                Boolean isDegree = (Boolean) people.get("isDegree");
+                peopleModel.setId((int)id);
+                peopleModel.setFirstName(peoplename);
+                peopleModel.setSurname(peoplesurname);
+                peopleModel.setAge((int)age);
+                peopleModel.setDegree(isDegree);
+                peopleList.add(peopleModel);
+            }
+            rootmodel.setPeople(peopleList);
+            System.out.println(rootmodel.toString());
+        } catch (Exception e){
+            System.out.println("Невозможно открыть json error = " + e.toString());
+            return;
+        }
+        finally {
+            if(fileReader!=null){
+                try{
+                    fileReader.close();
+                } catch (IOException e){
+                    System.out.println(e.toString()+
+                            "Невозможно закрыть fileReader error");
+                }
+            }
+        }
+    }
+
+    private static void parseGson(){
+
+        try {
+            BufferedReader bufferedReader = new BufferedReader
+                    (new FileReader("test.json"));
+            //пишем через билдер, если хотим переопределить какие-то конверторы,
+            // в данном случае дату
+            GsonBuilder builder = new GsonBuilder()
+                    .registerTypeAdapter(Date.class, new DateGsonConvert());
+            //можно без билдера сразу создавать new Gson();
+            Gson gson = builder.create();
+
+
+            Root root = gson.fromJson(bufferedReader,Root.class);
+            System.out.println("root = "+root.toString());
+        } catch (Exception e ){
+            System.out.println("Невозможно открыть json error = " + e.toString());
+            return;
+        }
+
+    }
 
 }
 

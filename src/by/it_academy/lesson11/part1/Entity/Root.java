@@ -1,11 +1,40 @@
 package by.it_academy.lesson11.part1.Entity;
 
+import java.util.Date;
 import java.util.List;
 
 public class Root {
 
+    private Gender gender;
     private String name;
     private List<People> people;
+    private Date date;
+
+    @Override
+    public String toString() {
+        return "Root{" +
+                "gender=" + gender +
+                ", name='" + name + '\'' +
+                ", people=" + people +
+                ", date=" + date +
+                '}';
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getName() {
         return name;

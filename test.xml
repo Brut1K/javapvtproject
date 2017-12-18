@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-   <name>Test file</name>
+   <firstName>Test file</firstName>
    <people>
       <element>
          <age>12</age>
          <id>0</id>
          <isDegree>true</isDegree>
-         <name>Ivan</name>
+         <firstName>Ivan</firstName>
          <surname>Ivanov</surname>
       </element>
       <element>
          <age>20</age>
          <id>1</id>
          <isDegree>false</isDegree>
-         <name>Sergei</name>
+         <firstName>Sergei</firstName>
          <surname>Petrov</surname>
       </element>
       <element>
          <age>42</age>
          <id>2</id>
          <isDegree>true</isDegree>
-         <name>Alexei</name>
+         <firstName>Alexei</firstName>
          <surname>Sidorov</surname>
       </element>
       <element>
          <age>34</age>
          <id>3</id>
          <isDegree>true</isDegree>
-         <name>Michael</name>
+         <firstName>Michael</firstName>
          <surname>Jackson</surname>
       </element>
       <element>
          <age>235</age>
          <id>4</id>
          <isDegree>true</isDegree>
-         <name>Alex</name>
+         <firstName>Alex</firstName>
          <surname>Lukushenko</surname>
       </element>
       <element>
          <age>21</age>
          <id>5</id>
          <isDegree>true</isDegree>
-         <name>Maksim</name>
+         <firstName>Maksim</firstName>
          <surname>Hsdfkj</surname>
       </element>
    </people>
