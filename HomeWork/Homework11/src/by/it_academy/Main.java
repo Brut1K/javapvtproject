@@ -2,8 +2,7 @@ package by.it_academy;
 
 import by.it_academy.Entity.Root;
 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
