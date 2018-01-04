@@ -1,0 +1,16 @@
+﻿{
+  "name": "GroupName",
+  "alex":
+  [
+  {
+    "name": "Test file",
+  "age": 25,
+  "checker": true
+  },
+    {
+      "name": "Test file2",
+      "age": 21,
+      "checker": false
+    }
+  ]
+}
