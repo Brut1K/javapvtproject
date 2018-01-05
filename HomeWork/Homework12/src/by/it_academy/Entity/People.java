@@ -1,14 +1,16 @@
 package by.it_academy.Entity;
 
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 public class People {
 
     private int id;
     private int age;
+    @JsonProperty("isDegree")
     private boolean isDegree;
-
+    @JsonProperty("name")
     private String firstName;
     private String surname;
 
