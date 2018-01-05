@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-        try (FileWriter writter = new FileWriter("D:\\javapvt\\javapvtproject\\HomeWork\\Homework7\\src\\by\\it_academy\\task2\\example.txt",false)) {
+        try (FileWriter writter = new FileWriter("D:\\javapvt\\javapvtproject\\HomeWork\\Homework7\\src\\by\\it_academy\\reflectionAPI\\example.txt",false)) {
             String text = "Вот так работает Filewritter";
             writter.write(text);
             writter.append('\n');
@@ -20,7 +20,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        try(FileReader reader = new FileReader("D:\\javapvt\\javapvtproject\\HomeWork\\Homework7\\src\\by\\it_academy\\task2\\example.txt"))
+        try(FileReader reader = new FileReader("D:\\javapvt\\javapvtproject\\HomeWork\\Homework7\\src\\by\\it_academy\\reflectionAPI\\example.txt"))
         {
             // читаем посимвольно
             int c;

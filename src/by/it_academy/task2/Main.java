@@ -3,7 +3,7 @@ package by.it_academy.task2;
 public class Main {
   //  public static String a ="Hello";
     public static void main(String[] args) {
-    /*   by.it_academy.task1.Main hello("Alex");
+    /*   by.it_academy.anonimClass.Main hello("Alex");
         int result = 0;
         System.out.println(plus(12,123));
     }
