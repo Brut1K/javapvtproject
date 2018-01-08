@@ -6,7 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Start main");
-    /*    Thread thread1 = new Thread(new Runnable() {
+    /*
+    //создаем новый поток и в него передаем экземпляр интерфейса
+    //Runnable(), где переопределяем метод run()
+     Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 //всё что напишем здесь будет запущенов в другом потоке
