@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String file = "test_22.doc";
-        String p = "([\\wА-яа-я]{1,})(\\.)(\\w+$)";
+        String file = "test_тест22.doc";
+        String p = "([\\wА-яа-я]{1,})(.)(\\w+$)";
         Pattern pattern = Pattern.compile(p);
         Matcher m = pattern.matcher(file);
         if(m.matches()) {
