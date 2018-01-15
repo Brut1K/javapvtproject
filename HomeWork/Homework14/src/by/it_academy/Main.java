@@ -75,7 +75,7 @@ public class Main {
             }
 
         }
-        
+
 
         //выводим в консоль созданный Map
         Set<String> keyset = mapMap.keySet();
