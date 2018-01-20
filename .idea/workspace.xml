@@ -12,11 +12,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="294">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson17/part3/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-621">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -116,7 +126,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -125,6 +135,61 @@
             <path>
               <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+              <item name="task1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="HomeWork" type="462c0819:PsiDirectoryNode" />
+              <item name="Homework15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+              <item name="task2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
@@ -143,6 +208,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="by" type="462c0819:PsiDirectoryNode" />
               <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson17" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson17" type="462c0819:PsiDirectoryNode" />
+              <item name="part2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javapvtproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it_academy" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson17" type="462c0819:PsiDirectoryNode" />
+              <item name="part3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javapvtproject" type="b2602c69:ProjectViewProjectNode" />
@@ -183,7 +274,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +531,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.4924357" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -451,7 +541,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -462,6 +552,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.4924357" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="145" y="103" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -623,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
           <caret line="167" column="52" lean-forward="true" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,12 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="e#184#185#0" expanded="false" />
-            <element signature="e#216#217#0" expanded="false" />
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#277#278#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,12 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#234#235#0" expanded="false" />
-            <element signature="e#283#284#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#861#862#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,11 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#458#459#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,13 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="33" column="2" lean-forward="false" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1516376506583" expanded="false" signature="758:777" ph=" { " />
-            <marker date="1516376506583" expanded="false" signature="807:821" ph=" }" />
-            <marker date="1516376506583" expanded="false" signature="878:897" ph=" { " />
-            <marker date="1516376506583" expanded="false" signature="935:949" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,9 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="e#152#153#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,34 +872,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Director.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Stuff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Director.java" />
+    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Stuff.java" />
+    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Department.java" />
     <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/task1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -857,12 +891,12 @@
         <state relative-caret-position="10">
           <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#267#268#0" expanded="false" />
+            <element signature="e#326#327#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#521#522#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -880,21 +914,21 @@
         <state relative-caret-position="81">
           <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#485#486#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#658#659#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#782#783#0" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1093#1094#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,15 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
           <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson17/part3/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,8 +945,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#112#113#0" expanded="false" />
+            <element signature="e#144#145#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -931,17 +956,25 @@
         <state relative-caret-position="459">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#448#457#0" expanded="true" />
-            <element signature="e#679#688#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#448#457#0" expanded="false" />
+            <element signature="e#679#688#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson19/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="294">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/it_academy/lesson17/part3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>

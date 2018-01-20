@@ -2,7 +2,7 @@ package by.it_academy.lesson19.kotlin
 
 import by.it_academy.lesson5.part1.Student
 
-
+/*
 fun main(arg:Array<String>){
 
     System.out.println("ajksd")
@@ -16,5 +16,4 @@ fun main(arg:Array<String>){
 
     val list = listof<String>
 
-
-}
+}*/
