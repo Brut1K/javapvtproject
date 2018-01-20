@@ -3,6 +3,7 @@
     <schoolName>Вверх</schoolName>
     <group>
         <groupName>Инжирики</groupName>
+        <schedule>Вторник, Четверг 18:00-19:00</schedule>
         <teacher>
             <name>Евгения</name>
             <surname>Сенчихина</surname>
@@ -44,6 +45,7 @@
     </group>
     <group>
         <groupName>Жасмин</groupName>
+        <schedule>Понедельник, Среда 18:00-19:00</schedule>
         <teacher>
             <name>Яна</name>
             <surname>Козел</surname>
