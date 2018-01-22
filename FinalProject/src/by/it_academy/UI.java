@@ -5,16 +5,19 @@ import by.it_academy.entity.Group;
 import by.it_academy.entity.School;
 import by.it_academy.entity.Student;
 import by.it_academy.entity.Teacher;
+import by.it_academy.io.ParseXML;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static by.it_academy.io.Downloader.download;
+import static by.it_academy.io.ParseJson.parseJson;
 import static by.it_academy.io.ParseXML.createXML;
 
 
 public class UI {
     public static void main(String[] args) {
-        School school = new School();
+   /*     School school = new School();
         school.setSchoolName("Вверх");
         List<Group> groups= new ArrayList<>();
         Group group1 = new Group();
@@ -57,6 +60,11 @@ public class UI {
 
         createXML(school);
 
-
+*/
+ //   download("xml");
+  //      ParseXML parseXML = new ParseXML();
+ //   School school = parseXML.parseXML();
+        parseJson();
+    //    System.out.println(school.toString());
     }
 }

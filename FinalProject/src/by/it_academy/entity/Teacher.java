@@ -12,4 +12,11 @@ public class Teacher extends People {
     public void setbDay(Date bDay) {
         this.bDay = bDay;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "bDay=" + bDay +
+                '}';
+    }
 }

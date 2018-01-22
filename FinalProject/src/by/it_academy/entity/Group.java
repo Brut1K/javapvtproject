@@ -6,6 +6,15 @@ public class Group {
     private String groupName;
     private Teacher teacher;
     private List<Student> students;
+    private String schedule;
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
 
     public String getGroupName() {
         return groupName;

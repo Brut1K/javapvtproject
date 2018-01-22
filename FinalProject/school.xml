@@ -8,37 +8,37 @@
             <name>Евгения</name>
             <surname>Сенчихина</surname>
             <lastname>Анатольевна</lastname>
-            <bDay>11-09-1990</bDay>
+            <bDay>09-11-1990</bDay>
         </teacher>
         <students>
         <student>
-            <name>Name0 999</name>
-            <surname>SurName0</surname>
-            <lastname>LastName0</lastname>
+            <name>Мария</name>
+            <surname>Цветаева</surname>
+            <lastname>Андреевна</lastname>
             <bDay>22-01-1999</bDay>
         </student>
         <student>
-            <name>Name1 999</name>
-            <surname>SurName1</surname>
-            <lastname>LastName1</lastname>
+            <name>Лев</name>
+            <surname>Толстой</surname>
+            <lastname>Николаевич</lastname>
             <bDay>23-02-2001</bDay>
         </student>
         <student>
-            <name>Name2 999</name>
-            <surname>SurName2</surname>
-            <lastname>LastName2</lastname>
+            <name>Алексей</name>
+            <surname>Бруцкий</surname>
+            <lastname>Анатольевич</lastname>
             <bDay>25-07-2004</bDay>
         </student>
         <student>
-            <name>Name3 999</name>
-            <surname>SurName3</surname>
-            <lastname>LastName3</lastname>
+            <name>Илья</name>
+            <surname>Ермоленко</surname>
+            <lastname>Михайлович</lastname>
             <bDay>17-10-2005</bDay>
         </student>
         <student>
-            <name>Name4 999</name>
-            <surname>SurName4</surname>
-            <lastname>LastName4</lastname>
+            <name>Кристина</name>
+            <surname>Сухоцкая</surname>
+            <lastname>Александровна</lastname>
             <bDay>18-09-1999</bDay>
         </student>
         </students>
@@ -52,5 +52,37 @@
             <lastname>Евгеньевна</lastname>
             <bDay>22-07-1991</bDay>
         </teacher>
+        <students>
+            <student>
+                <name>Елена</name>
+                <surname>Шурыгина</surname>
+                <lastname>Игнатьевна</lastname>
+                <bDay>22-01-1999</bDay>
+            </student>
+            <student>
+                <name>Антон</name>
+                <surname>Малахов</surname>
+                <lastname>Евдокимович</lastname>
+                <bDay>23-02-2001</bDay>
+            </student>
+            <student>
+                <name>Галина</name>
+                <surname>Банет</surname>
+                <lastname>Евгеньевна</lastname>
+                <bDay>25-07-2004</bDay>
+            </student>
+            <student>
+                <name>Платон</name>
+                <surname>Тищенко</surname>
+                <lastname>Аристотельевич</lastname>
+                <bDay>17-10-2005</bDay>
+            </student>
+            <student>
+                <name>Анастасия</name>
+                <surname>Кергет</surname>
+                <lastname>Будулаевна</lastname>
+                <bDay>18-09-1999</bDay>
+            </student>
+        </students>
     </group>
 </school>
