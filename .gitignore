@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+*.iml
 .idea/workspace.xml
 out/
 
@@ -13,6 +14,7 @@ out/
 .mtj.tmp/
 
 # Package Files #
+*.iml
 *.war
 *.ear
 *.zip

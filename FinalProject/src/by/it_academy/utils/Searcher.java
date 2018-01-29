@@ -9,50 +9,33 @@ import java.util.*;
 
 
 public class Searcher {
-    public static List<Student> searcher(School school) {
+    public List<Student> searcher(int i,String attr,School school) {
         List<Student> students = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        int command;
-        do {
-            System.out.println("Выберите вариант поиска:\n" +
-                    "1. По имени или фамилии\n" +
-                    "2. По возрасту\n" +
-                    "3. По названию группы\n" +
-                    "4. По имени педагога\n" +
-                    "5. Отменить поиск\n" +
-                    "Введите цифру 1-5");
-            command = scanner.nextInt();
-            switch(command){
+        String searchChoice;
+            searchChoice = scanner.nextLine();
+            switch(i){
                 case 1:{
-                    System.out.println("Введите имя, фамилию или отчество(можно частично)");
-                    students = searchByName(school,scanner.next());
-                    break;
+                    students = searchByName(school,attr);
+                    return students;
                 }
                 case 2:{
-                    System.out.println("Введите возраст");
-                    students = searchByAge(school,scanner.nextInt());
+                    students = searchByAge(school,Integer.parseInt(attr ));
                     break;
                 }
                 case 3:{
-                    System.out.println("Введите название группы");
-                    students = searchByGroup(school,scanner.nextLine());
+                    students = searchByGroup(school,attr);
                     break;
                 }
                 case 4:{
-                    System.out.println("Введите фамилию педагога");
-                    students = searchByTeacher(school,scanner.nextLine());
-                    break;
-                }
-                case 5:{
-                    System.out.println("Поиск отменен");
+                    students = searchByTeacher(school,attr);
                     break;
                 }
                 default:{
-                    System.out.println("Вы ввели некорректные данные");
+
                     break;
                 }
             }
-        } while (command!=5);
         return students;
     }
 

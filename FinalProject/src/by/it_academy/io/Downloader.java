@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 
 public class Downloader {
 
-    public static void download(String format) {
-        String xmlLink = "<http://drop53.dropmefiles.com/dl/vAntl/255908486/school.xml";
-        String jsonLink = "http://kiparo.ru/t/bank_card.json";
+    public void download(String format) {
+        String xmlLink = "http://kiparo.ru/t/school.xml";
+        String jsonLink = "http://kiparo.ru/t/school.json";
         String patternS = "(.+)"+"("+format +"$)";
         Pattern pattern = Pattern.compile(patternS);
         Matcher matcher = pattern.matcher(xmlLink);
@@ -22,10 +22,10 @@ public class Downloader {
         String filepath;
         if(matcher.matches()) {
             link = xmlLink;
-           filepath = "data.xml";
+           filepath = "school.xml";
         } else{
             link = jsonLink;
-            filepath = "data.json";
+            filepath = "school.json";
         }
         InputStream inputStream = null;
         FileOutputStream fileOutputStream = null;

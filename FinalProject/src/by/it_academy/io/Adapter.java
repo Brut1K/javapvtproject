@@ -12,12 +12,13 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
-import static by.it_academy.io.ParseJson.parseJson;
+
 
 public class Adapter {
 
-    public static void adapterJsonToXml(String path) {
-        School school = parseJson(path);
+    public static void adapterJsonToXml() {
+        ParseJson parseJson = new ParseJson();
+        School school = parseJson.parseJson();
         createXML(school);
 
     }

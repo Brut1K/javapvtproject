@@ -10,20 +10,15 @@ import java.util.Date;
 
 public class ParseJson {
 
-    public static School parseJson(String path) {
+    public School parseJson() {
         try {
             BufferedReader bufferedReader = new BufferedReader
-                    (new FileReader(path));
+                    (new FileReader("school.json"));
             //пишем через билдер, если хотим переопределить какие-то конверторы,
             // в данном случае дату
             GsonBuilder builder = new GsonBuilder() .registerTypeAdapter(Date.class, new DateGsonConvert());
-
-            //можно без билдера сразу создавать new Gson();
             Gson gson = builder.create();
-
-
             School school = gson.fromJson(bufferedReader, School.class);
-            System.out.println("root = " + school.toString());
             return school;
         } catch (Exception e) {
             System.out.println("Невозможно открыть json error = " + e.toString());
