@@ -4,20 +4,18 @@ package by.it_academy.utils;
 
 import by.it_academy.entity.School;
 import by.it_academy.entity.Student;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 
 public class Searcher {
-    public List<Student> searcher(int i,String attr,School school) {
+    public List<Student> searcher(int i, String attr, School school) {
         List<Student> students = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        String searchChoice;
-            searchChoice = scanner.nextLine();
             switch(i){
                 case 1:{
                     students = searchByName(school,attr);
-                    return students;
+                    break;
                 }
                 case 2:{
                     students = searchByAge(school,Integer.parseInt(attr ));
@@ -39,11 +37,9 @@ public class Searcher {
         return students;
     }
 
-    public static List<Student> searchByAge(School school, int age) {
+    private List<Student> searchByAge(School school, int age) {
         List<Student> studentList = new ArrayList<>();
-        Date date = new Date();
         GregorianCalendar curDate = new GregorianCalendar();
-        curDate.setTime(date);
         GregorianCalendar calendar = new GregorianCalendar();
         for (int i = 0; i < school.getGroups().size(); i++) {
             for (int j = 0; j < school.getGroups().get(i).getStudents().size(); j++) {
@@ -59,13 +55,13 @@ public class Searcher {
     }
 
 
-    public static List<Student> searchByName(School school,String s) {
+    private List<Student> searchByName(School school,String s) {
         List<Student> studentList = new ArrayList<>();
         for(int i = 0; i<school.getGroups().size();i++){
             for(int j = 0;j<school.getGroups().get(i).getStudents().size();j++){
-                if(school.getGroups().get(i).getStudents().get(j).getName().contains(s)||
-                        school.getGroups().get(i).getStudents().get(j).getLastname().contains(s)||
-                        school.getGroups().get(i).getStudents().get(j).getSurname().contains(s)){
+                if(school.getGroups().get(i).getStudents().get(j).getName().toLowerCase().contains(s.toLowerCase())||
+                        school.getGroups().get(i).getStudents().get(j).getLastname().toLowerCase().contains(s.toLowerCase())||
+                        school.getGroups().get(i).getStudents().get(j).getSurname().toLowerCase().contains(s.toLowerCase())){
                     studentList.add(school.getGroups().get(i).getStudents().get(j));
                 }
             }
@@ -74,10 +70,10 @@ public class Searcher {
     }
 
 
-    public static List<Student> searchByGroup(School school, String group) {
+    private List<Student> searchByGroup(School school, String group) {
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < school.getGroups().size(); i++) {
-            if(school.getGroups().get(i).equals(group)){
+            if(school.getGroups().get(i).getGroupName().toLowerCase().equals(group.toLowerCase())){
                 for (int j = 0; j < school.getGroups().get(i).getStudents().size(); j++){
                     studentList.add(school.getGroups().get(i).getStudents().get(j));
                 }
@@ -87,10 +83,10 @@ public class Searcher {
     }
 
 
-    public static List<Student> searchByTeacher(School school, String teacherSurName) {
+    private List<Student> searchByTeacher(School school, String teacherSurName) {
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < school.getGroups().size(); i++) {
-            if(school.getGroups().get(i).getTeacher().getSurname().equals(teacherSurName)){
+            if(school.getGroups().get(i).getTeacher().getSurname().toLowerCase().equals(teacherSurName.toLowerCase())){
                 for (int j = 0; j < school.getGroups().get(i).getStudents().size(); j++){
                     studentList.add(school.getGroups().get(i).getStudents().get(j));
                 }

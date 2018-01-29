@@ -9,22 +9,24 @@ import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static by.it_academy.UI.print;
+
 
 public class Downloader {
-
+    final String  XMLLINK = "http://kiparo.ru/t/school.xml";
+    final String JSONLINK = "http://kiparo.ru/t/school.json";
     public void download(String format) {
-        String xmlLink = "http://kiparo.ru/t/school.xml";
-        String jsonLink = "http://kiparo.ru/t/school.json";
+
         String patternS = "(.+)"+"("+format +"$)";
         Pattern pattern = Pattern.compile(patternS);
-        Matcher matcher = pattern.matcher(xmlLink);
+        Matcher matcher = pattern.matcher(XMLLINK);
         String link;
         String filepath;
         if(matcher.matches()) {
-            link = xmlLink;
+            link = XMLLINK;
            filepath = "school.xml";
         } else{
-            link = jsonLink;
+            link = JSONLINK;
             filepath = "school.json";
         }
         InputStream inputStream = null;
@@ -44,25 +46,25 @@ public class Downloader {
                     fileOutputStream.write(buffer, 0, byteRead);
                 }
             } else {
-                System.out.println("Данные не найдены, response code = "
+                print("Данные не найдены, response code = "
                         + responseCode);
             }
         } catch (Exception e) {
-            System.out.println("Невозможно скачать файл");
+            print("Невозможно скачать файл");
         } finally {
             if (inputStream != null)
                 try {
                     inputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
-                    System.out.println("Невозможно закрыть inputStream");
+                    print("Невозможно закрыть inputStream");
                 }
             if (fileOutputStream != null)
                 try {
                     fileOutputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
-                    System.out.println("Невозможно закрыть fileOutputStream");
+                    print("Невозможно закрыть fileOutputStream");
                 }
         }
     }

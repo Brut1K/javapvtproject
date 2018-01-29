@@ -6,10 +6,13 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 
 import java.lang.reflect.Type;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import static by.it_academy.UI.print;
 
 public class DateGsonConvert implements JsonDeserializer<Date>{
 
@@ -31,5 +34,16 @@ public class DateGsonConvert implements JsonDeserializer<Date>{
         }
 
         return null;
+    }
+
+    public static Date parseData(String s){
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.forLanguageTag("by"));
+        try {
+            date = sdf.parse(s);
+        } catch(ParseException e){
+            print("Формат неверный");
+        }
+        return date;
     }
 }

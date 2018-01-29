@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Date;
 
+import static by.it_academy.UI.print;
+
 public class ParseJson {
 
     public School parseJson() {
@@ -21,7 +23,7 @@ public class ParseJson {
             School school = gson.fromJson(bufferedReader, School.class);
             return school;
         } catch (Exception e) {
-            System.out.println("Невозможно открыть json error = " + e.toString());
+            print("Невозможно открыть json error = " + e.toString());
             return null;
         }
     }

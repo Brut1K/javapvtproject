@@ -8,15 +8,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+import static by.it_academy.UI.print;
+import static by.it_academy.io.DateGsonConvert.parseData;
+
+
 
 public class ParseXML {
 
@@ -59,13 +59,7 @@ public class ParseXML {
                 String teacherSurName = ((Element) teacherNode).getElementsByTagName("surname").item(0).getTextContent();
                 String teacherLastName = ((Element) teacherNode).getElementsByTagName("lastname").item(0).getTextContent();
                 String teacherbDay = ((Element) teacherNode).getElementsByTagName("bDay").item(0).getTextContent();
-                Date teacherbDaydate = new Date();
-                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.forLanguageTag("by"));
-                try {
-                    teacherbDaydate = sdf.parse(teacherbDay);
-                } catch(ParseException e){
-                    System.out.println("Формат неверный");
-                }
+                Date teacherbDaydate = parseData(teacherbDay);
                 teacher.setName(teacherName);
                 teacher.setSurname(teacherSurName);
                 teacher.setLastname(teacherLastName);
@@ -86,12 +80,7 @@ public class ParseXML {
                     String surName = element1.getElementsByTagName("surname").item(0).getTextContent();
                     String lastName = element1.getElementsByTagName("lastname").item(0).getTextContent();
                     String bDay = element1.getElementsByTagName("bDay").item(0).getTextContent();
-                    Date bDaydate = new Date();
-                    try {
-                        bDaydate = sdf.parse(bDay);
-                    } catch(ParseException e){
-                        System.out.println("Формат неверный");
-                    }
+                    Date bDaydate = parseData(bDay);
                     student.setName(name);
                     student.setSurname(surName);
                     student.setLastname(lastName);
@@ -107,7 +96,7 @@ public class ParseXML {
             school.setGroups(groups);
             return school;
         }  catch(Exception e){
-            System.out.println("Невозможно открыть xml error = " + e.toString());
+            print("Невозможно открыть xml error = " + e.toString());
             return null;
         }
    }
