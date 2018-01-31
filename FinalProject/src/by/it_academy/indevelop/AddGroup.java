@@ -1,4 +1,4 @@
-package by.it_academy.utils;
+package by.it_academy.indevelop;
 
 
 import by.it_academy.entity.Group;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static by.it_academy.utils.AddStudent.addStudent;
-import static by.it_academy.utils.AddTeacher.addTeacher;
+import static by.it_academy.indevelop.AddStudent.addStudent;
+import static by.it_academy.indevelop.AddTeacher.addTeacher;
 
 public class AddGroup {
     public static Group addGroup(){

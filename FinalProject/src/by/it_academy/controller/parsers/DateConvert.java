@@ -1,4 +1,4 @@
-package by.it_academy.io;
+package by.it_academy.controller.parsers;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -11,16 +11,27 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+import static by.it_academy.view.UI.print;
 
-import static by.it_academy.UI.print;
+/**
+ * Класс, который помогает конвертирвать дату
+ */
 
-public class DateGsonConvert implements JsonDeserializer<Date>{
+public class DateConvert implements JsonDeserializer<Date>{
 
         private final String[] FORMATS = new String[]{
             "dd-MM-yyyy HH:mm",
             "dd-MM-yyyy"
         };
 
+    /**
+     * Конвертор даты для json
+     * @param json
+     * @param typeOfT
+     * @param context
+     * @return
+     * @throws JsonParseException
+     */
     @Override
     public Date deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         for(String format:FORMATS   ){
@@ -36,14 +47,20 @@ public class DateGsonConvert implements JsonDeserializer<Date>{
         return null;
     }
 
+    /**
+     * Конвертор даты из String
+     * @param s
+     * @return
+     */
     public static Date parseData(String s){
-        Date date = new Date();
+        Date date;
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.forLanguageTag("by"));
         try {
             date = sdf.parse(s);
+            return date;
         } catch(ParseException e){
             print("Формат неверный");
         }
-        return date;
+        return null;
     }
 }

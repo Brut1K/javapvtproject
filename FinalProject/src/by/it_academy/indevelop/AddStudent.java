@@ -1,4 +1,4 @@
-package by.it_academy.utils;
+package by.it_academy.indevelop;
 
 
 
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-import static by.it_academy.utils.AddParent.addParent;
+import static by.it_academy.indevelop.AddParent.addParent;
 
 public class AddStudent {
     public static Student addStudent(){

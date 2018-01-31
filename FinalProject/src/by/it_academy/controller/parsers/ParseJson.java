@@ -1,4 +1,4 @@
-package by.it_academy.io;
+package by.it_academy.controller.parsers;
 
 import by.it_academy.entity.School;
 import com.google.gson.Gson;
@@ -8,17 +8,17 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Date;
 
-import static by.it_academy.UI.print;
+import static by.it_academy.view.UI.print;
 
-public class ParseJson {
+public class ParseJson extends Parser {
 
-    public School parseJson() {
+    public School parse() {
         try {
             BufferedReader bufferedReader = new BufferedReader
                     (new FileReader("school.json"));
             //пишем через билдер, если хотим переопределить какие-то конверторы,
             // в данном случае дату
-            GsonBuilder builder = new GsonBuilder() .registerTypeAdapter(Date.class, new DateGsonConvert());
+            GsonBuilder builder = new GsonBuilder() .registerTypeAdapter(Date.class, new DateConvert());
             Gson gson = builder.create();
             School school = gson.fromJson(bufferedReader, School.class);
             return school;

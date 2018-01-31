@@ -1,48 +1,104 @@
-package by.it_academy;
+package by.it_academy.view;
 
 
+import by.it_academy.controller.Manager;
 import by.it_academy.entity.School;
 import by.it_academy.entity.Student;
 import java.util.List;
 import java.util.Scanner;
 
 
-public class UI {
+public class UI implements UiInterface {
+
+    public static volatile boolean dlAndParsechecker = false;
+    static String format;
+
     public static void main(String[] args) {
         UI ui = new UI();
-        Scanner sc = new Scanner(System.in);
         Manager manager = Manager.getInstance();
         manager.setUi(ui);
+        ui.prepareToWork();
+        ui.mainMenu();
+    }
+
+    /**
+     * Подготовка данных к работе, скачивание и парсинг
+     */
+    @Override
+    public void prepareToWork(){
+        Scanner sc = new Scanner(System.in);
+        Manager manager =Manager.getInstance();
         System.out.println("Здравствуйте, данные для работы находятся" +
                 " на web-ресурсе. Какой формат данных скачать?\n" +
                 "Выберите 1 для XML, либо 2 для JSON");
         String command;
         boolean checker = false;
+
         do {
             command = sc.nextLine();
             if (manager.inputchecker(command)) {
                 switch (command) {
                     case "1": {
-                        manager.createSchoolFromWeb("xml");
+                        format = "xml";
                         checker = true;
                         break;
                     }
                     case "2": {
-                        manager.createSchoolFromWeb("json");
+                        format = "json";
                         checker = true;
                         break;
                     }
                     default: {
+                        System.out.println("Вы ввели некорректные данные\n" +
+                                "\"Выберите 1 для XML, либо 2 для JSON\"");
                         break;
                     }
                 }
+
+
             } else {
                 System.out.println("Вы ввели некорректные данные\n" +
                         "\"Выберите 1 для XML, либо 2 для JSON\"");
             }
+
+            if(checker) {
+                Thread createschoolThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        manager.createSchoolFromWeb(format);
+                    }
+                });
+                createschoolThread.start();
+                while (!dlAndParsechecker) {
+                    if (createschoolThread.isAlive()) {
+                        try {
+                            Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.print(".");
+                    } else {
+                        System.out.println("Произошла ошибка, попробуйте повторить попытку позже");
+                        prepareToWork();
+                    }
+                }
+
+            }
         } while (checker == false);
+    }
 
-
+    /**
+     * Основное меню, где пользователь работает с данными
+     */
+    @Override
+    public void mainMenu() {
+        Manager manager = Manager.getInstance();
+        Scanner sc = new Scanner(System.in);
         String comm;
         do {
             System.out.println("Выберите функцию, которой вы хотите воспользоваться:\n" +
@@ -66,7 +122,7 @@ public class UI {
                                     "5. Отменить поиск\n" +
                                     "Введите цифру 1-5");
                             searchChoice = sc.nextLine();
-                            if(manager.inputchecker(searchChoice)){
+                            if (manager.inputchecker(searchChoice)) {
                                 switch (searchChoice) {
                                     case "1": {
                                         System.out.println("Введите имя, фамилию или отчество(можно частично)");
@@ -99,13 +155,13 @@ public class UI {
                                         break;
                                     }
                                 }
-                                if(invoke) {
+                                if (invoke) {
                                     manager.search(Integer.parseInt(searchChoice), sc.nextLine());
                                 }
                             } else {
                                 System.out.println("Вы ввели некорректные данные");
                             }
-                            } while (!searchChoice.equals("5"));
+                        } while (!searchChoice.equals("5"));
 
                     }
 
@@ -132,10 +188,14 @@ public class UI {
                 System.out.println("Вы ввели некорректные данные");
             }
 
-        }  while (!comm.equals("4")) ;
-            }
+        } while (!comm.equals("4"));
+    }
 
-
+    /**
+     * Вывод информации о школе
+     * @param school
+     */
+    @Override
     public void info(School school) {
         int countGroup = 0;
         int countStudent = 0;
@@ -148,6 +208,11 @@ public class UI {
                 "Учеников " + countStudent + " чел.");
     }
 
+    /**
+     * Вывод информации о ученике
+     * @param student
+     */
+    @Override
     public void info(Student student){
         System.out.println("Имя: " + student.getName() + "\n" +
                 "Фамилия: " + student.getSurname() + "\n" +
@@ -156,6 +221,11 @@ public class UI {
 
     }
 
+    /**
+     * Вывод информации о группе учеников
+     * @param list
+     */
+    @Override
     public void info(List<Student> list){
         for(int i = 0;i<list.size();i++){
             System.out.println((i+1)+". " + list.get(i).getSurname() +
@@ -163,6 +233,10 @@ public class UI {
         }
     }
 
+    /**
+     * Вывод заданного сообщения в консоль
+     * @param s - сообщение
+     */
     public static void print(String s){
         System.out.println(s);
     }

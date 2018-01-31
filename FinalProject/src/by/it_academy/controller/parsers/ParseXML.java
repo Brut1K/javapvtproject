@@ -1,4 +1,4 @@
-package by.it_academy.io;
+package by.it_academy.controller.parsers;
 
 import by.it_academy.entity.Group;
 import by.it_academy.entity.School;
@@ -13,14 +13,14 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import static by.it_academy.UI.print;
-import static by.it_academy.io.DateGsonConvert.parseData;
+import static by.it_academy.view.UI.print;
+import static by.it_academy.controller.parsers.DateConvert.parseData;
 
 
 
-public class ParseXML {
+public class ParseXML extends Parser{
 
-    public School parseXML(){
+    public School parse(){
 
         //org.wc3.dom
         Document dom;

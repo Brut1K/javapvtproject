@@ -1,5 +1,6 @@
-package by.it_academy.io;
+package by.it_academy.controller.io;
 
+import by.it_academy.controller.parsers.ParseJson;
 import by.it_academy.entity.School;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -12,13 +13,17 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
-
+/**
+ * Паттерн адаптер. Делает из json'овского файла xml'евский.
+ */
 
 public class Adapter {
 
+
+
     public static void adapterJsonToXml() {
         ParseJson parseJson = new ParseJson();
-        School school = parseJson.parseJson();
+        School school = parseJson.parse();
         createXML(school);
 
     }

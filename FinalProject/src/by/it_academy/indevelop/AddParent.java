@@ -1,4 +1,4 @@
-package by.it_academy.utils;
+package by.it_academy.indevelop;
 
 
 import by.it_academy.entity.Parent;

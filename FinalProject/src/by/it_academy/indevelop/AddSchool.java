@@ -1,4 +1,4 @@
-package by.it_academy.utils;
+package by.it_academy.indevelop;
 
 import by.it_academy.entity.Group;
 import by.it_academy.entity.School;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static by.it_academy.utils.AddGroup.addGroup;
+import static by.it_academy.indevelop.AddGroup.addGroup;
 
 public class AddSchool {
     public static School addSchool(){
